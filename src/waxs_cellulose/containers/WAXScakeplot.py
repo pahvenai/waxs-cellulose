@@ -1,4 +1,5 @@
 import numpy as np
+from waxs_cellulose.helpers.units import PhysicalUnit
 
 class WAXScakeplot:
     """
@@ -8,12 +9,13 @@ class WAXScakeplot:
     masked values.
     """
     q: np.ndarray
+    qUnit: PhysicalUnit
     azim: np.ndarray
     I: np.ndarray
     mask: np.ndarray
     metadata: dict
     
-    def __init__(self, intensities, azim, q, protected = False):
+    def __init__(self, intensities, azim, q, qUnit = "1/AA", protected = False):
         self.I = intensities
         shape = self.I.shape
         
@@ -34,4 +36,5 @@ class WAXScakeplot:
                              ", allowed values 2 and " + str(shape[1]))
          
         self.mask = np.ones(shape)
+        self.qUnit = PhysicalUnit(qUnit)
         self.protected = protected
