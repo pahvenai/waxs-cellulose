@@ -1,3 +1,5 @@
+import numpy as np
+
 class WAXSazimIntensities:
     """
     Container for handling 1D WAXS scattering intensities, specifically integrated over q-range
@@ -7,6 +9,6 @@ class WAXSazimIntensities:
     """
     azim: np.ndarray
     qRange: np.ndarray
-    intensity: np.ndarray
+    I: np.ndarray
     mask: np.ndarray
     metadata: dict

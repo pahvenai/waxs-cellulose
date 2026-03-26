@@ -1,3 +1,5 @@
+import numpy as np
+
 class WAXSintensities:
     """
     Container for handling 1D WAXS scattering intensities.
@@ -5,6 +7,6 @@ class WAXSintensities:
     All operations on intensity must leave out masked values.
     """
     q: np.ndarray
-    intensity: np.ndarray
+    I: np.ndarray
     mask: np.ndarray
     metadata: dict

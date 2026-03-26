@@ -1,3 +1,5 @@
+import numpy as np
+
 class WAXScakeplot:
     """
     Preprocessed 2D scattering data presented as a function of 
@@ -7,6 +9,6 @@ class WAXScakeplot:
     """
     q: np.ndarray
     azim: np.ndarray
-    intensities: np.ndarray
+    I: np.ndarray
     mask: np.ndarray
     metadata: dict
