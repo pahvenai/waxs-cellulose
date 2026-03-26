@@ -1,0 +1,7 @@
+"""
+Notebook contents:
+- What is WAXS?
+- Cellulose structure
+- Example dataset
+- Basic preprocessing
+"""
